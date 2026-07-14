@@ -1,0 +1,26 @@
+{
+  "gemini_api_key": "AIzaSyCBO-kJEo7Us_EFnY-BHZvM6Jj3vQBqMR0",
+  "run_at_startup": false,
+  "openrouter_api_key": "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",
+  "groq_api_key": "",
+  "monitor_hz": 60,
+  "monitor_resolution": "1920x1080",
+  "monitor_profiles": [
+    {
+      "name": "Default",
+      "resolution": "1920x1080",
+      "hz": 60
+    }
+  ],
+  "active_monitor_profile": "Default",
+  "cloud_sync_enabled": false,
+  "cloud_access_token": "y0__xDFyITqARiiuEAg1KrljBcwkuujmwi_0Xmja10mKIwzz-CjnVAKwneIJg",
+  "cloud_refresh_token": "",
+  "cloud_last_sync": "2026-06-04T08:59:21.166632",
+  "cloud_folder": "FPS_Targeter_Backup",
+  "cloud_backup_name": "fps_targeter_backup.zip",
+  "target_fps_user_modified": false,
+  "tracked_games": [],
+  "first_launch_done": true,
+  "ai_provider": "OpenRouter"
+}

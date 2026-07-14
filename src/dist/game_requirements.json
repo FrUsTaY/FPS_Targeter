@@ -1,0 +1,10 @@
+{
+  "PRAGMATA": {
+    "min_cpu": "Intel Core i5-8500",
+    "min_gpu": "GeForce GTX 1660",
+    "min_ram_gb": 16,
+    "min_vram_gb": 8,
+    "requires_hardware_rt": false,
+    "genre": "Action"
+  }
+}

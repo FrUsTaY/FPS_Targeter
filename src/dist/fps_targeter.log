@@ -1,0 +1,55 @@
+2026-06-04 09:47:40,757 [root] INFO: === FPS Targeter v2.3 запущен ===
+2026-06-04 09:47:40,757 [root] INFO: Платформа: win32, Python 3.14.5 (tags/v3.14.5:5607950, May 10 2026, 10:43:50) [MSC v.1944 64 bit (AMD64)]
+2026-06-04 09:47:40,758 [root] INFO: Создан отсутствующий файл: game_presets_db.json
+2026-06-04 09:47:40,758 [root] INFO: Определение оборудования...
+2026-06-04 09:47:40,759 [Hardware] INFO: Python интерпретатор: C:\Users\a.smolin\Desktop\Проекты от GigaCode\FPS_Targeter\src\dist\FPS_Targeter.exe
+2026-06-04 09:47:40,759 [Hardware] INFO: CPU обнаружен: Intel(R) Core(TM) i3-10100 CPU @ 3.60GHz (метод: реестр)
+2026-06-04 09:47:40,761 [Hardware] INFO: RAM обнаружено: 15.8 ГБ (всего 17000988672 байт)
+2026-06-04 09:47:40,783 [Hardware] INFO: GPU обнаружен (NVML): NVIDIA P106-100, VRAM: 6.0 ГБ
+2026-06-04 09:47:40,784 [root] INFO: Оборудование определено:
+CPU: Intel(R) Core(TM) i3-10100 CPU @ 3.60GHz
+RAM: 15.8 GB
+GPU: NVIDIA P106-100 (VRAM: 6.0 GB)
+2026-06-04 09:47:40,785 [Hardware] INFO: Дисплей: разрешение=1920x1080, герцовка=60 Гц
+2026-06-04 09:47:40,785 [settings] INFO: Файл настроек не найден, используются значения по умолчанию.
+2026-06-04 09:47:40,785 [root] INFO: Автоопределена герцовка: 60 Гц
+2026-06-04 09:47:40,785 [root] INFO: Первый запуск: создаём профиль 'Default' с параметрами 1920x1080 @ 60 Гц
+2026-06-04 09:47:40,785 [settings] INFO: Активный профиль монитора изменён на 'Default'(1920x1080 @ 60 Гц)
+2026-06-04 09:47:40,795 [settings] INFO: Настройки сохранены: {'gemini_api_key': '***', 'run_at_startup': False, 'openrouter_api_key': '***', 'groq_api_key': '***', 'monitor_hz': 60, 'monitor_resolution': '1920x1080', 'monitor_profiles': [{'name': 'Default', 'resolution': '1920x1080', 'hz': 60}], 'active_monitor_profile': 'Default', 'cloud_sync_enabled': False, 'cloud_access_token': '***', 'cloud_refresh_token': '***', 'cloud_last_sync': '', 'cloud_folder': 'FPS_Targeter_Backup', 'cloud_backup_name': 'fps_targeter_backup.zip', 'target_fps_user_modified': False, 'tracked_games': []}
+2026-06-04 09:47:40,795 [root] INFO: Настройки монитора и профили сохранены
+2026-06-04 09:47:40,795 [root] INFO: Инициализация базы данных...
+2026-06-04 09:47:40,795 [Database] INFO: Путь к БД: C:\Users\a.smolin\Desktop\Проекты от GigaCode\FPS_Targeter\src\dist\fps_data.db
+2026-06-04 09:47:40,795 [Database] INFO: Путь к БД: C:\Users\a.smolin\Desktop\Проекты от GigaCode\FPS_Targeter\src\dist\fps_data.db
+2026-06-04 09:47:40,840 [Database] INFO: Миграция: добавлено уникальное ограничение для games_data
+2026-06-04 09:47:40,840 [Database] INFO: Миграция: добавлена колонка uuid в hardware_profiles
+2026-06-04 09:47:40,843 [Database] INFO: Миграция: добавлена колонка response_gemini в games_data
+2026-06-04 09:47:40,846 [Database] INFO: Миграция: добавлена колонка response_openrouter в games_data
+2026-06-04 09:47:40,849 [Database] INFO: Миграция: добавлена колонка response_groq в games_data
+2026-06-04 09:47:40,850 [Database] INFO: База данных (v2.3) инициализирована.
+2026-06-04 09:47:40,850 [root] INFO: База данных готова.
+2026-06-04 09:47:40,850 [root] INFO: Поиск профиля для CPU=Intel(R) Core(TM) i3-10100 CPU @ 3.60GHz, GPU=NVIDIA P106-100
+2026-06-04 09:47:44,873 [Database] INFO: Создан профиль ID=1, UUID=53d9b757548d5d1d: CPU=Intel(R) Core(TM) i3-10100 CPU @ 3.60GHz, GPU=NVIDIA P106-100, RAM=15.8 GB, VRAM=6.0 ГБ
+2026-06-04 09:47:44,876 [Database] INFO: Активный профиль: ID=1
+2026-06-04 09:47:44,877 [root] INFO: Создан новый профиль ID=1 (CPU: Intel(R) Core(TM) i3-10100 CPU @ 3.60GHz, GPU: NVIDIA P106-100, RAM: 15.8 GB, VRAM: 6.0)
+2026-06-04 09:47:44,877 [root] INFO: Инициализация главного окна...
+2026-06-04 09:47:44,898 [settings] INFO: Настройки загружены: {'gemini_api_key': '***', 'run_at_startup': False, 'openrouter_api_key': '***', 'groq_api_key': '***', 'monitor_hz': 60, 'monitor_resolution': '1920x1080', 'monitor_profiles': [{'name': 'Default', 'resolution': '1920x1080', 'hz': 60}], 'active_monitor_profile': 'Default', 'cloud_sync_enabled': False, 'cloud_access_token': '***', 'cloud_refresh_token': '***', 'cloud_last_sync': '', 'cloud_folder': 'FPS_Targeter_Backup', 'cloud_backup_name': 'fps_targeter_backup.zip', 'target_fps_user_modified': False, 'tracked_games': []}
+2026-06-04 09:47:44,899 [settings] INFO: Настройки загружены: {'gemini_api_key': '***', 'run_at_startup': False, 'openrouter_api_key': '***', 'groq_api_key': '***', 'monitor_hz': 60, 'monitor_resolution': '1920x1080', 'monitor_profiles': [{'name': 'Default', 'resolution': '1920x1080', 'hz': 60}], 'active_monitor_profile': 'Default', 'cloud_sync_enabled': False, 'cloud_access_token': '***', 'cloud_refresh_token': '***', 'cloud_last_sync': '', 'cloud_folder': 'FPS_Targeter_Backup', 'cloud_backup_name': 'fps_targeter_backup.zip', 'target_fps_user_modified': False, 'tracked_games': []}
+2026-06-04 09:47:44,932 [settings] INFO: Настройки загружены: {'gemini_api_key': '***', 'run_at_startup': False, 'openrouter_api_key': '***', 'groq_api_key': '***', 'monitor_hz': 60, 'monitor_resolution': '1920x1080', 'monitor_profiles': [{'name': 'Default', 'resolution': '1920x1080', 'hz': 60}], 'active_monitor_profile': 'Default', 'cloud_sync_enabled': False, 'cloud_access_token': '***', 'cloud_refresh_token': '***', 'cloud_last_sync': '', 'cloud_folder': 'FPS_Targeter_Backup', 'cloud_backup_name': 'fps_targeter_backup.zip', 'target_fps_user_modified': False, 'tracked_games': []}
+2026-06-04 09:47:44,932 [settings] INFO: Настройки загружены: {'gemini_api_key': '***', 'run_at_startup': False, 'openrouter_api_key': '***', 'groq_api_key': '***', 'monitor_hz': 60, 'monitor_resolution': '1920x1080', 'monitor_profiles': [{'name': 'Default', 'resolution': '1920x1080', 'hz': 60}], 'active_monitor_profile': 'Default', 'cloud_sync_enabled': False, 'cloud_access_token': '***', 'cloud_refresh_token': '***', 'cloud_last_sync': '', 'cloud_folder': 'FPS_Targeter_Backup', 'cloud_backup_name': 'fps_targeter_backup.zip', 'target_fps_user_modified': False, 'tracked_games': []}
+2026-06-04 09:47:45,041 [root] INFO: Главное окно отображено.
+2026-06-04 09:47:45,041 [hotkey] INFO: Регистрация глобальных горячих клавиш...
+2026-06-04 09:47:45,041 [hotkey] INFO: Горячая клавиша Alt+F зарегистрирована.
+2026-06-04 09:47:45,041 [hotkey] INFO: Горячая клавиша Ctrl+Shift+R зарегистрирована.
+2026-06-04 09:47:45,041 [hotkey] INFO: Горячая клавиша Ctrl+Shift+F зарегистрирована (ручной ввод FPS).
+2026-06-04 09:47:45,042 [root] INFO: Горячие клавиши Alt+F, Ctrl+Shift+R, Ctrl+Shift+F зарегистрированы.
+2026-06-04 09:47:45,102 [settings] INFO: Настройки загружены: {'gemini_api_key': '***', 'run_at_startup': False, 'openrouter_api_key': '***', 'groq_api_key': '***', 'monitor_hz': 60, 'monitor_resolution': '1920x1080', 'monitor_profiles': [{'name': 'Default', 'resolution': '1920x1080', 'hz': 60}], 'active_monitor_profile': 'Default', 'cloud_sync_enabled': False, 'cloud_access_token': '***', 'cloud_refresh_token': '***', 'cloud_last_sync': '', 'cloud_folder': 'FPS_Targeter_Backup', 'cloud_backup_name': 'fps_targeter_backup.zip', 'target_fps_user_modified': False, 'tracked_games': []}
+2026-06-04 09:47:46,803 [settings] INFO: Настройки загружены: {'gemini_api_key': '***', 'run_at_startup': False, 'openrouter_api_key': '***', 'groq_api_key': '***', 'monitor_hz': 60, 'monitor_resolution': '1920x1080', 'monitor_profiles': [{'name': 'Default', 'resolution': '1920x1080', 'hz': 60}], 'active_monitor_profile': 'Default', 'cloud_sync_enabled': False, 'cloud_access_token': '***', 'cloud_refresh_token': '***', 'cloud_last_sync': '', 'cloud_folder': 'FPS_Targeter_Backup', 'cloud_backup_name': 'fps_targeter_backup.zip', 'target_fps_user_modified': False, 'tracked_games': []}
+2026-06-04 09:47:47,455 [settings] INFO: Настройки сохранены: {'gemini_api_key': '***', 'run_at_startup': False, 'openrouter_api_key': '***', 'groq_api_key': '***', 'monitor_hz': 60, 'monitor_resolution': '1920x1080', 'monitor_profiles': [{'name': 'Default', 'resolution': '1920x1080', 'hz': 60}], 'active_monitor_profile': 'Default', 'cloud_sync_enabled': False, 'cloud_access_token': '***', 'cloud_refresh_token': '***', 'cloud_last_sync': '', 'cloud_folder': 'FPS_Targeter_Backup', 'cloud_backup_name': 'fps_targeter_backup.zip', 'target_fps_user_modified': False, 'tracked_games': []}
+2026-06-04 09:47:48,639 [settings] INFO: Настройки сохранены: {'gemini_api_key': '***', 'run_at_startup': False, 'openrouter_api_key': '***', 'groq_api_key': '***', 'monitor_hz': 60, 'monitor_resolution': '1920x1080', 'monitor_profiles': [{'name': 'Default', 'resolution': '1920x1080', 'hz': 60}], 'active_monitor_profile': 'Default', 'cloud_sync_enabled': False, 'cloud_access_token': '***', 'cloud_refresh_token': '***', 'cloud_last_sync': '', 'cloud_folder': 'FPS_Targeter_Backup', 'cloud_backup_name': 'fps_targeter_backup.zip', 'target_fps_user_modified': False, 'tracked_games': []}
+2026-06-04 09:47:49,974 [hotkey] INFO: Горячая клавиша alt_f разрегистрирована.
+2026-06-04 09:47:49,975 [hotkey] INFO: Горячая клавиша ctrl_shift_r разрегистрирована.
+2026-06-04 09:47:49,975 [hotkey] INFO: Горячая клавиша ctrl_shift_f разрегистрирована.
+2026-06-04 09:47:49,975 [root] INFO: === FPS Targeter завершён (код 0) ===
+2026-06-04 09:47:49,978 [TargetControl] INFO: [Управление] refresh() вызван
+2026-06-04 09:47:49,978 [TargetControl] INFO: [Управление] refresh: current_game пуст
+2026-06-04 09:47:49,979 [settings] INFO: Настройки загружены: {'gemini_api_key': '***', 'run_at_startup': False, 'openrouter_api_key': '***', 'groq_api_key': '***', 'monitor_hz': 60, 'monitor_resolution': '1920x1080', 'monitor_profiles': [{'name': 'Default', 'resolution': '1920x1080', 'hz': 60}], 'active_monitor_profile': 'Default', 'cloud_sync_enabled': False, 'cloud_access_token': '***', 'cloud_refresh_token': '***', 'cloud_last_sync': '', 'cloud_folder': 'FPS_Targeter_Backup', 'cloud_backup_name': 'fps_targeter_backup.zip', 'target_fps_user_modified': False, 'tracked_games': []}

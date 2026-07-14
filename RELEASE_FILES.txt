@@ -1,0 +1,194 @@
+# Файлы для релиза FPS Targeter v2.3
+
+## ✅ Готовые к релизу файлы
+
+### Исходный код (25 файлов .py)
+
+```
+src/
+├── ai_engine.py
+├── ai_scout_tab.py
+├── api_key_manager.py
+├── base_tab.py
+├── benchmark_editor.py
+├── calibration_tab.py
+├── cloud_sync.py
+├── database.py
+├── game_requirements.py
+├── game_tracker.py
+├── gpu_name_resolver.py
+├── hardware.py
+├── hotkey.py
+├── icon_generator.py
+├── logging_utils.py
+├── main.py
+├── monitor_profiles_dialog.py
+├── network_manager.py
+├── overlay_manager.py
+├── performance_widgets.py
+├── settings.py
+├── steam_importer.py
+├── target_control_tab.py
+├── tracked_games_dialog.py
+└── ui.py
+```
+
+**Примечание**: Служебные файлы (.gigacode, .gigaide, .idea, логи, базы данных) удалены для релиза.
+
+### Документация
+
+```
+src/
+├── README.md           - Основная документация
+├── RELEASE.md          - Информация о релизе
+├── CHANGELOG.md        - История изменений
+└── LICENSE             - Лицензия MIT
+
+/                       - Корневой README
+└── README.md
+```
+
+### Скрипты сборки
+
+```
+src/
+├── simple_build.bat    - Простая сборка (рекомендуется)
+├── build.bat           - Полная сборка
+└── build.sh            - Сборка для Linux/Mac
+```
+
+### Конфигурационные файлы (в папке src/)
+
+```
+src/
+├── game_requirements.json      - Системные требования игр
+├── hardware_benchmark.json     - База данных производительности
+├── icon.ico                    - Иконка приложения (78 KB)
+└── overlay_settings.json       - Настройки оверлея
+```
+
+**Примечание**: Эти файлы должны быть скопированы в `src/dist/` после сборки.
+
+### Файлы зависимостей
+
+```
+src/
+└── requirements.txt
+```
+
+## 📦 Содержимое релиза
+
+### Для распространения через .exe
+
+После сборки с помощью `simple_build.bat` или `build.bat`:
+
+```
+src/dist/
+├── FPS_Targeter.exe            - Готовый исполняемый файл (86 MB)
+├── game_requirements.json      - Системные требования игр (205 байт)
+├── hardware_benchmark.json     - База данных производительности (4086 байт)
+└── overlay_settings.json       - Настройки оверлея (150 байт)
+```
+
+**Обязательные файлы для корректной работы:**
+- `FPS_Targeter.exe` - главный исполняемый файл
+- `game_requirements.json` - база требований игр
+- `hardware_benchmark.json` - база бенчмарков
+- `overlay_settings.json` - настройки оверлея
+
+**Автоматически создаваемые файлы (первый запуск):**
+- `fps_data.db` - база данных SQLite
+- `fps_settings.json` - настройки приложения
+- `fps_targeter.log` - лог-файл
+- `game_presets_db.json` - пресеты для игр
+
+**Документация:**
+- `START.md` - руководство по запуску (находится в корне проекта)
+
+### Для распространения через исходный код
+
+```
+FPS_Targeter/
+├── README.md                   - Корневой README
+├── RELEASE_FILES.txt           - Информация о релизе
+├── requirements.txt            - Зависимости Python
+└── src/
+    ├── main.py
+    ├── main.spec               - Спецификация PyInstaller
+    ├── requirements.txt
+    ├── simple_build.bat        - Простая сборка (рекомендуется)
+    ├── build.bat               - Полная сборка
+    ├── all_other_py_files      - Остальные файлы .py
+    ├── *.json                  - Конфигурационные файлы
+    ├── *.ico                   - Иконки
+    ├── *.md                    - Документация
+    └── LICENSE                 - Лицензия
+```
+
+## 🚀 Как собрать релиз
+
+### Шаг 1: Подготовка
+
+```bash
+cd src
+pip install -r requirements.txt
+```
+
+### Шаг 2: Сборка
+
+```bash
+# Простая сборка (рекомендуется)
+simple_build.bat
+
+# ИЛИ полная сборка
+build.bat
+```
+
+### Шаг 3: Копирование файлов данных
+
+**Важно**: PyInstaller не копирует файлы .json автоматически через `datas`, поэтому нужно выполнить ручное копирование:
+
+```powershell
+Copy-Item -Path "game_requirements.json", "hardware_benchmark.json", "overlay_settings.json" -Destination "dist\" -Force
+```
+
+### Шаг 4: Проверка
+
+Проверьте папку `src/dist/` - там должны быть:
+- `FPS_Targeter.exe` (86 MB)
+- `game_requirements.json` (205 байт)
+- `hardware_benchmark.json` (4086 байт)
+- `overlay_settings.json` (150 байт)
+
+### Шаг 5: Тестирование
+
+Запустите `src/dist/FPS_Targeter.exe` и проверьте:
+1. Приложение открывается без ошибок
+2. Оборудование определяется корректно
+3. Настройки сохраняются
+4. Лог-файл создается в папке dist/
+
+## 📝 Примечания
+
+- Все файлы настроек создаются автоматически при первом запуске
+- Лог-файл `fps_targeter.log` также создается автоматически
+- База данных `fps_data.db` создается автоматически при первом запуске
+- Имена файлов данных были изменены в v2.3 для соответствия требованиям:
+  - `game_requirements.json` (база требований игр)
+  - `hardware_benchmark.json` (база бенчмарков)
+  - `game_presets_db.json` (пресеты игр)
+- Исправлена ошибка импорта в `calibration_tab.py` (строка 1261)
+- Служебные файлы (.gigacode, .gigaide, .idea, логи, базы данных) удалены для релиза
+- При сборке .exe файлы .json должны быть скопированы в папку dist/ вручную
+
+## 🎯 Требования к системе
+
+- Windows 10/11 (64-bit)
+- 4 ГБ RAM (минимум)
+- 1 ГБ свободного места на диске
+
+## 📄 Лицензия
+
+MIT License
+
+Copyright (c) 2026 FPS Targeter Developer
