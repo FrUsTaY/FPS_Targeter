@@ -32,6 +32,14 @@ if %errorlevel% neq 0 (
 )
 
 echo.
+echo Копирование необходимых конфигурационных файлов в dist...
+if not exist "dist" mkdir dist
+if exist "game_requirements.json" copy /y "game_requirements.json" "dist\game_requirements.json" >nul
+if exist "hardware_benchmark.json" copy /y "hardware_benchmark.json" "dist\hardware_benchmark.json" >nul
+if exist "overlay_settings.json" copy /y "overlay_settings.json" "dist\overlay_settings.json" >nul
+echo Файлы успешно скопированы.
+
+echo.
 echo === Сборка завершена! ===
-echo Готовый .exe файл находится в папке dist/
+echo Готовый .exe файл и конфигурации находятся в папке dist/
 pause

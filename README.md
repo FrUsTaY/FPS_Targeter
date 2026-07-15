@@ -112,13 +112,7 @@ pip install pyinstaller
 pyinstaller --onefile --windowed --clean main.py
 ```
 
-**Важно**: После сборки файлы `.json` не копируются автоматически PyInstaller'ом. Выполните ручное копирование:
-
-```powershell
-Copy-Item -Path "game_requirements.json", "hardware_benchmark.json", "overlay_settings.json" -Destination "dist\" -Force
-```
-
-Готовый .exe файл будет находиться в папке `src/dist/`.
+Готовый .exe файл будет находиться в папке `src/dist/`. Скрипты сборки `simple_build.bat`, `build.bat` и `build.sh` автоматически скопируют все необходимые `.json` файлы конфигурации в папку `dist/`. Если вы собираете вручную (Способ 3), вам может потребоваться скопировать их самостоятельно.
 
 **Содержимое папки dist/ после сборки:**
 - `FPS_Targeter.exe` (86 MB) - главный исполняемый файл
